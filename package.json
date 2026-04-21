@@ -2,7 +2,7 @@
   "name": "equation-ai",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/Aly26ssa/equation-ai",
+  "homepage": "https://aly26ssa.github.io/equation-ai/",
   "type": "module",
   "scripts": {
     "dev": "vite",
