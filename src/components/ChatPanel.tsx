@@ -112,7 +112,14 @@ export function ChatPanel() {
           {loading && (
             <li className="bubble assistant thinking" aria-busy="true">
               <span className="bubble-role">EquationAI</span>
-              <p>Thinking…</p>
+              <p className="thinking-line">
+                <span className="thinking-prefix">Thinking</span>
+                <span className="thinking-dots" aria-hidden="true">
+                  <span className="thinking-dot" />
+                  <span className="thinking-dot" />
+                  <span className="thinking-dot" />
+                </span>
+              </p>
               {slowHint && (
                 <p className="thinking-hint">
                   Still working — can take up to several
@@ -135,7 +142,7 @@ export function ChatPanel() {
 
       <form className="composer" onSubmit={handleSend}>
         <MathKeyboard inputRef={inputRef} visible={mathKeysOpen} />
-        <div className="composer-row">
+        <div className="composer-chatbox">
           <textarea
             ref={inputRef}
             className="composer-input"
@@ -146,13 +153,15 @@ export function ChatPanel() {
             disabled={loading}
             aria-label="Message"
           />
-          <button
-            type="submit"
-            className="send-btn"
-            disabled={loading || !input.trim()}
-          >
-            Send
-          </button>
+          <div className="composer-chatbox-actions">
+            <button
+              type="submit"
+              className="send-btn"
+              disabled={loading || !input.trim()}
+            >
+              Send
+            </button>
+          </div>
         </div>
       </form>
 
