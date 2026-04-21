@@ -142,7 +142,7 @@ export function ChatPanel() {
 
       <form className="composer" onSubmit={handleSend}>
         <MathKeyboard inputRef={inputRef} visible={mathKeysOpen} />
-        <div className="composer-row">
+        <div className="composer-chatbox">
           <textarea
             ref={inputRef}
             className="composer-input"
@@ -153,13 +153,15 @@ export function ChatPanel() {
             disabled={loading}
             aria-label="Message"
           />
-          <button
-            type="submit"
-            className="send-btn"
-            disabled={loading || !input.trim()}
-          >
-            Send
-          </button>
+          <div className="composer-chatbox-actions">
+            <button
+              type="submit"
+              className="send-btn"
+              disabled={loading || !input.trim()}
+            >
+              Send
+            </button>
+          </div>
         </div>
       </form>
 
