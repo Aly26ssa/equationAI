@@ -57,7 +57,7 @@ export async function sendMathMessage(
         : e instanceof Error && e.name === 'AbortError'
     if (aborted) {
       throw new Error(
-        `No response after ${timeoutMs / 1000}s. Is Ollama running (ollama serve)? For large models, the first answer can take several minutes — try again or use a smaller model tag.`,
+        `No response after ${timeoutMs / 1000}s. The model request timed out — try again, or use a faster model.`,
       )
     }
     throw e
