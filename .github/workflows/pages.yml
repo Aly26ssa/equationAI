@@ -2,9 +2,9 @@
 #
 # Setup (once): Repo → Settings → Pages → Build and deployment → Source: GitHub Actions
 #
-# After renaming the repo to `equation-ai`, the site lives at:
-#   https://aly26ssa.github.io/equation-ai/
-# Vite `base` in vite.config.ts must stay `/equation-ai/` so assets load.
+# Site URL: https://<user>.github.io/<repo>/
+# GITHUB_PAGES_BASE is set to /${{ github.event.repository.name }}/ so the same
+# commit works in forks and in this repo (e.g. mathgpt-clone vs equation-ai).
 name: Deploy GitHub Pages
 
 on:
@@ -33,6 +33,8 @@ jobs:
           cache: npm
 
       - name: Install and build
+        env:
+          GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
         run: |
           npm ci
           npm run build
