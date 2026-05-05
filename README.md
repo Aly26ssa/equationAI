@@ -1,6 +1,6 @@
 # 🧮 EquationAI
  
-A MathGPT-inspired math problem solver built with React, TypeScript, and Vite. Enter any math problem — from basic arithmetic to advanced equations — and get instant, step-by-step solutions powered by AI.
+A MathGPT-inspired math problem solver named EquationAI is built with React, TypeScript, and Vite. Enter any math problem from basic arithmetic to advanced equations and get instant, step-by-step solutions powered by AI.
  
 ## Features
  
