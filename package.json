@@ -1,8 +1,8 @@
 {
-  "name": "equation-ai",
+  "name": "mathgpt-clone",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://aly26ssa.github.io/equation-ai/",
+  "homepage": "https://aly26ssa.github.io/mathgpt-clone/",
   "type": "module",
   "scripts": {
     "dev": "vite",
