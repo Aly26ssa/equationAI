@@ -11,7 +11,7 @@ const repoBase =
     ? rawBase.startsWith('/')
       ? rawBase.replace(/\/?$/, '/') || '/'
       : `/${rawBase.replace(/\/$/, '')}/`
-    : '/equation-ai/'
+    : '/mathgpt-clone/'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
